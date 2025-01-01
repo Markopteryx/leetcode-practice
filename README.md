@@ -20,4 +20,10 @@ contains_duplicate/stdlib/large_with_dups
 
 contains_duplicate/ahash/large_with_dups
     time:   [56.410 µs 56.640 µs 56.890 µs]
+
+two_sum/stdlib/large
+    time:   [1.6487 µs 1.6559 µs 1.6646 µs]
+
+two_sum/ahash/large
+    time:   [1.3897 µs 1.3920 µs 1.3946 µs]
 ```
