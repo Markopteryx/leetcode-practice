@@ -7,8 +7,8 @@ use ahash::AHashMap;
 // Example: Input: s = "rat", t = "car", Output: false
 //
 // Constraints
-// 1 <= s.length, t.length <= 5 * 10^4
-// s & t consist of lowercase English letters
+// * 1 <= s.length, t.length <= 5 * 10^4
+// * s & t consist of lowercase English letters
 pub fn is_anagram(s: String, t: String) -> bool {
     let mut map = AHashMap::new();
     s.chars().for_each(|c| *map.entry(c).or_insert(0) += 1);

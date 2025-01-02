@@ -5,7 +5,7 @@ use criterion::{criterion_group, criterion_main, BenchmarkId, Criterion};
 use leetcode_practice::problems::*;
 
 fn bench_all(c: &mut Criterion) {
-    // bench_contains_duplicate(c);
+    bench_contains_duplicate(c);
     // bench_two_sum(c);}
 }
 
