@@ -1,5 +1,6 @@
 #![allow(dead_code)]
 #![allow(unused_variables)]
+#![allow(unused_imports)]
 
 use criterion::{criterion_group, criterion_main, BenchmarkId, Criterion};
 use leetcode_practice::problems::*;
@@ -29,11 +30,11 @@ fn bench_contains_duplicate(c: &mut Criterion) {
         let ahash_id = BenchmarkId::new("ahash", name);
 
         group.bench_with_input(stdlib_id, &nums, |b, nums| {
-            b.iter(|| contains_duplicate::contains_duplicate(nums.clone()))
+            b.iter(|| arrays::contains_duplicate::contains_duplicate(nums.clone()))
         });
 
         group.bench_with_input(ahash_id, &nums, |b, nums| {
-            b.iter(|| contains_duplicate::contains_duplicate_v2(nums.clone()))
+            b.iter(|| arrays::contains_duplicate::contains_duplicate_v2(nums.clone()))
         });
     }
     group.finish();
@@ -48,11 +49,11 @@ fn bench_two_sum(c: &mut Criterion) {
         let ahash_id = BenchmarkId::new("ahash", name);
 
         group.bench_with_input(stdlib_id, &nums, |b, nums| {
-            b.iter(|| two_sum::two_sum(nums.clone(), target))
+            b.iter(|| arrays::two_sum::two_sum(nums.clone(), target))
         });
 
         group.bench_with_input(ahash_id, &nums, |b, nums| {
-            b.iter(|| two_sum::two_sum_v2(nums.clone(), target))
+            b.iter(|| arrays::two_sum::two_sum_v2(nums.clone(), target))
         });
     }
     group.finish();
