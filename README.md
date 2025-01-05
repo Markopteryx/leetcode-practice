@@ -4,6 +4,14 @@ The purpose of this repo is to brush up on my data structures and algorithms kno
 
 Most of the optimisations implemented here will come from my reading of [The Rust Performance Book](https://nnethercote.github.io/perf-book/) along with various gitbub repos, blogs and YouTube videos.
 
+## Utility Cargo Subcommand
+
+`cargo-problem` has a Cargo subcommand that can insalled by running `cargo install --path .` inside the cargo-problem directory. Then running:
+
+`cargo problem folder_name problem_name`
+
+Will create a `problem_name.rs` at `src/problems/folder_name` and append the `mod.rs` inside that folder.
+
 ## Hashmap and HashSet
 
 Looking at `contains_duplicates.rs` and `two_sum` I made use of the standard libraries HashSet and HashMap structures, however they make use of the `SipHash 1-3` hashing algorithm, which is a general purpose, denial-of-service resistant hashing function. This isn't required when the inputs are known - which is the case in many scenarios. Looking at the results:
