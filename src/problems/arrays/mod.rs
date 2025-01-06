@@ -5,3 +5,4 @@ pub mod product_except_self;
 pub mod top_k_frequent_elements;
 pub mod two_sum;
 pub mod longest_consecutive;
+pub mod merge_alternately;
