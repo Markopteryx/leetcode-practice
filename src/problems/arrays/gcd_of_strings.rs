@@ -90,17 +90,4 @@ mod tests {
             "TAUXX"
         );
     }
-
-    #[test]
-    fn test_different_lengths_with_divisor() {
-        assert_eq!(
-            gcd_of_strings("ABABABAB".to_string(), "ABAB".to_string()),
-            "AB"
-        );
-    }
-
-    #[test]
-    fn test_single_char_multiple_times() {
-        assert_eq!(gcd_of_strings("XXXX".to_string(), "XX".to_string()), "X");
-    }
 }
