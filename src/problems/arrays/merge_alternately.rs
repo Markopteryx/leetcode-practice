@@ -17,27 +17,13 @@
 // * 1 <= word1.length, word2.length <= 100
 // * word1 and word2 consist of lowercase English letters
 pub fn merge_alternately(word1: String, word2: String) -> String {
-    if word1.is_empty() {
-        return word2;
-    }
-
-    if word2.is_empty() {
-        return word1;
-    }
-
-    let mut result = String::new();
-    for (c1, c2) in word1.chars().zip(word2.chars()) {
-        result.push(c1);
-        result.push(c2);
-    }
-
-    match word1.len().cmp(&word2.len()) {
-        std::cmp::Ordering::Greater => result.push_str(&word1[word2.len()..]),
-        std::cmp::Ordering::Less => result.push_str(&word2[word1.len()..]),
-        std::cmp::Ordering::Equal => {}
-    }
-
-    result
+    word1
+        .chars()
+        .zip(word2.chars())
+        .flat_map(|(c1, c2)| [c1, c2])
+        .chain(word1.chars().skip(word2.len()))
+        .chain(word2.chars().skip(word1.len()))
+        .collect()
 }
 
 #[cfg(test)]

@@ -6,3 +6,5 @@ pub mod top_k_frequent_elements;
 pub mod two_sum;
 pub mod longest_consecutive;
 pub mod merge_alternately;
+pub mod gcd_of_strings;
+pub mod kids_with_candies;
