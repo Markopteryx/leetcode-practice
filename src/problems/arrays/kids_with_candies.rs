@@ -24,7 +24,7 @@
 // * 1 <= candies[i] <= 100
 // * 1 <= extraCandies <= 50
 
-pub fn kids_with_candies(candies: Vec<i32>, extra_candies: i32) -> Vec<bool> {
+pub fn kids_with_candies(_candies: Vec<i32>, _extra_candies: i32) -> Vec<bool> {
     // TODO: Implement solution
     vec![]
 }
