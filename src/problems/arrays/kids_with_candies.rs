@@ -59,13 +59,11 @@ mod tests {
 
     #[test]
     fn test_minimum_length() {
-        // Test with minimum allowed length (n=2)
         assert_eq!(kids_with_candies(vec![1, 2], 1), vec![true, true]);
     }
 
     #[test]
     fn test_all_equal() {
-        // When all kids have same candies, all should be true with any extra
         assert_eq!(
             kids_with_candies(vec![5, 5, 5, 5], 1),
             vec![true, true, true, true]
@@ -74,20 +72,16 @@ mod tests {
 
     #[test]
     fn test_maximum_constraints() {
-        // Test with maximum allowed values
-        // Max candies = 100, max extra = 50
         assert_eq!(kids_with_candies(vec![100, 98], 50), vec![true, true]);
     }
 
     #[test]
     fn test_no_effect() {
-        // Test where extra candies don't change the relative ordering
         assert_eq!(kids_with_candies(vec![10, 1], 1), vec![true, false]);
     }
 
     #[test]
     fn test_single_maximum() {
-        // Test where only one kid can reach the maximum
         assert_eq!(
             kids_with_candies(vec![1, 10, 1], 8),
             vec![false, true, false]
@@ -96,13 +90,11 @@ mod tests {
 
     #[test]
     fn test_minimum_extra_candies() {
-        // Test with minimum extra candies (1)
         assert_eq!(kids_with_candies(vec![5, 4, 3], 1), vec![true, true, false]);
     }
 
     #[test]
     fn test_large_differences() {
-        // Test with large differences between kids
         assert_eq!(
             kids_with_candies(vec![1, 50, 100, 25], 50),
             vec![false, true, true, false]

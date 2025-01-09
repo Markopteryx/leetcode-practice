@@ -2,6 +2,8 @@ pub mod contains_duplicate;
 pub mod gcd_of_strings;
 pub mod group_anagrams;
 pub mod is_anagram;
+// pub mod kids_with_candies;
+pub mod can_place_flowers;
 pub mod longest_consecutive;
 pub mod merge_alternately;
 pub mod product_except_self;

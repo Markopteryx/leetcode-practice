@@ -35,5 +35,3 @@ two_sum/stdlib/large
 two_sum/ahash/large
     time:   [1.3897 µs 1.3920 µs 1.3946 µs]
 ```
-
-##

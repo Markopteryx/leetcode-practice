@@ -61,7 +61,6 @@ mod tests {
 
     #[test]
     fn test_same_frequency() {
-        // When elements have same frequency, any order is acceptable
         let result = top_k_frequent(vec![1, 1, 2, 2, 3, 3], 2);
         assert_eq!(result.len(), 2);
         assert!(result.into_iter().all(|x| [1, 2, 3].contains(&x)));
